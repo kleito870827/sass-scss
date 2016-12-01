@@ -1,0 +1,14 @@
+img{
+  max-width: 90%;
+  margin-bottom: em(24px);
+  padding: em(12px);
+}
+.img{
+  &-wrap{
+    border: 2px solid palette(grey, x-light);
+  }
+  &-roll{
+    border-radius: 100%;
+    margin-top: 10%;
+  }
+}

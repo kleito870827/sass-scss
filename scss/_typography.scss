@@ -1,0 +1,42 @@
+body{
+  font-family: $primary-fonts;
+}
+
+h1{
+  font-weight: $light-font;
+  font-size: em(42px);
+  color: palette(grey, x-dark);
+}
+h2{
+  font-family: $secondary-fonts;
+  font-weight: $thin-font;
+  font-size: em(24px);
+  color: palette(grey, light);
+}
+h3{
+  text-transform: uppercase;
+  font-weight: $medium-font;
+  font-size: em(14px);
+  color: palette(grey, x-light);
+}
+p{
+  font-size: em(18px);
+  line-height: (27px/18px);
+  font-weight: $light-font;
+  color: $grey;
+}
+blockquote{
+  font-size: em(24px);
+  font-style: italic;
+  font-weight: $light-font;
+  color: $grey;
+  margin: em(32px, 24px) 0;
+  border-left: solid em(8px, 24px) palette(grey, xx-light);
+}
+a{
+  color: $teal;
+  text-decoration: none;
+  &:hover{
+    color: $red-orange;
+  }
+}

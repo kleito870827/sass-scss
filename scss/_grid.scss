@@ -1,0 +1,35 @@
+.row{
+  @extend %clearfix;
+  @extend .centered;
+  @include mq(large){
+    max-width: $container-max;
+  };
+  margin-bottom: em(60px);
+}
+
+@include mq(medium){
+  @for $i from 1 through $col-total{
+    $target: $column*$i + $gutter*($i - 1);
+    .col-#{$i}{
+      width: percentage($target/ $grid-context);
+
+    }
+    .random-#{$i}{
+        background-color: rgba(random(190), random(190), random(190), 0.2);
+        text-align: center;
+        box-shadow: 2px 2px 7px grey;
+    }
+  }
+};
+
+[class^='col-']{
+  &+&{
+    margin-left: percentage($gutter/$grid-context);
+  }
+  float: left;
+  margin: em(12px) 0;
+}
+
+@include mq(small){
+  margin: em(12px) 0;
+};

@@ -1,0 +1,14 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w --include-path scss scss/app.scss css/app.css",
+    "server": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

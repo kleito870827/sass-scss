@@ -1,0 +1,70 @@
+//fonts
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower';
+$font-stack: Helvetica, Arial, sans-serif;
+$primary-fonts: 'Roboto', $font-stack;
+$secondary-fonts: 'Helvetica Neue', $font-stack;
+$thin-font: 100;
+$light-font: 300;
+$medium-font: 400;
+$bold-font: 700;
+
+//colors
+$teal: #468966;
+$light-yellow: #fff0A5;
+$orange: #ffB03B;
+$red-orange: #B64926;
+$red: #8E2800;
+$grey: #797e83;
+
+$color-map:(
+  teal: $teal,
+  light-yellow: $light-yellow,
+  orange: $orange,
+  red-orange: $red-orange,
+  red: $red,
+);
+
+$color-palettes:(
+  grey:(
+  xx-light: lighten($grey, 43%),
+  x-light: lighten($grey, 35%),
+  light: lighten($grey, 12%),
+  dark: darken($grey, 8%),
+  x-dark: darken($grey, 16%),
+  ),
+  orange:(
+  xx-light: lighten($orange, 43%),
+  x-light: lighten($orange, 35%),
+  light: lighten($orange, 12%),
+  dark: darken($orange, 8%),
+  x-dark: darken($orange, 16%),
+  ),
+  red:(
+  xx-light: lighten($red, 43%),
+  x-light: lighten($red, 35%),
+  light: lighten($red, 12%),
+  dark: darken($red, 8%),
+  x-dark: darken($red, 16%),
+  )
+);
+
+@function palette($map, $shade){
+
+  @return map-get(map-get($color-palettes, $map), $shade)
+}
+
+//breakpoints
+$bp-sm: 1px;
+$bp-md: 768px;
+$bp-lg: 1100px;
+
+//grid
+$column: 65px;
+$gutter: 20px;
+$col-total: 12;
+$container-max: 1050px;
+$grid-context: $column * $col-total + $gutter*($col-total - 1);
+
+//global vars
+$br: 4px;//border-radius
+$trns: .3s;//transition duration

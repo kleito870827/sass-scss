@@ -1,0 +1,28 @@
+input, textarea{
+  background: palette(grey, xx-light);
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 2px 2px 7px palette(grey, light)
+}
+input{
+  height: 20px;
+}
+.form-text{
+  margin-top: 147px;
+}
+
+
+button{
+  margin: 20px;
+}
+.button{
+  &-login{
+    background: $teal;
+  }
+  &-submit{
+    background: $orange;
+  }
+  &-reset{
+  background: $red;
+  }
+}
